@@ -12,5 +12,7 @@
             "email": "adamogris@outlook.at"
         }
     ],
-    "require": {}
+    "require": {
+        "twbs/bootstrap": "^5.3"
+    }
 }
