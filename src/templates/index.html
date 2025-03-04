@@ -41,40 +41,25 @@
 <div class="container my-5">
   <div class="row">
     <!-- Hotel 1 -->
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <img src="###Hotel1Pic###" class="card-img-top" alt="Hotel Paradise">
-        <div class="card-body">
-          <h5 class="card-title">###Hotel1Name###</h5>
-          <p class="card-text">###Hotel1Description###</p>
-          <a href="#" class="btn btn-primary">Read More</a>
+    <!-- Hotels Loop -->
+    <div class="container my-5">
+      <div class="row">
+        {{HOTEL_LOOP}}
+        <!-- Hotel Card Template -->
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <img src="{{HOTEL_IMAGE}}" class="card-img-top" alt="{{HOTEL_NAME}}">
+            <div class="card-body">
+              <h5 class="card-title">{{HOTEL_NAME}}</h5>
+              <p class="card-text">{{HOTEL_DESCRIPTION}}</p>
+              <a href="#" class="btn btn-primary">Read More</a>
+            </div>
+          </div>
         </div>
+        {{HOTEL_LOOP_END}}
       </div>
     </div>
 
-    <!-- Hotel 2 -->
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <img src="###Hotel2Pic###" class="card-img-top" alt="Ocean View Resort">
-        <div class="card-body">
-          <h5 class="card-title">###Hotel2Name###</h5>
-          <p class="card-text">###Hotel2Description###</p>
-          <a href="#" class="btn btn-primary">Read More</a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Hotel 3 -->
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm">
-        <img src="###Hotel3Pic###" class="card-img-top" alt="Mountain Escape Lodge">
-        <div class="card-body">
-          <h5 class="card-title">###Hotel3Name###</h5>
-          <p class="card-text">###Hotel1Description###</p>
-          <a href="#" class="btn btn-primary">Read More</a>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
