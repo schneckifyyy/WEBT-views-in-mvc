@@ -8,10 +8,8 @@ $hotels = [
     new Hotel("Mountain Escape Lodge", "Surrounded by stunning mountains, this lodge is the perfect getaway for those seeking adventure and relaxation.", "src/images/mountainsEscapeLodge.jpg")
 ];
 
-// Read the template
 $template = file_get_contents('src/templates/index.html');
 
-// Extract the loop block
 preg_match('/{{HOTEL_LOOP}}(.*?){{HOTEL_LOOP_END}}/s', $template, $matches);
 $hotelTemplate = $matches[1] ?? '';
 
@@ -24,7 +22,6 @@ foreach ($hotels as $hotel) {
     $hotelHtml .= $hotelEntry;
 }
 
-// Replace the loop block in the template
 $template = preg_replace('/{{HOTEL_LOOP}}(.*?){{HOTEL_LOOP_END}}/s', $hotelHtml, $template);
 
 echo $template;
